@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# Datasets (too large for git)
+*.csv
+*.json.gz
+*.parquet
+*.pkl
+*.h5
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Outputs (generated at runtime)
+*/outputs/*.png
+*/outputs/*.jpg
+*/results/*.png
+*/results/*.csv
+
+# Models
+*.pt
+*.pth
+*.onnx
+*.bin
