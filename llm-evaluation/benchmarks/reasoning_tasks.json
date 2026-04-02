@@ -1,0 +1,72 @@
+[
+  {
+    "id": "r001",
+    "category": "multi_step_reasoning",
+    "prompt": "A train leaves City A at 9:00 AM traveling at 60 mph. Another train leaves City B (300 miles away) at 10:00 AM traveling at 90 mph toward City A. At what time do they meet, and how far from City A?",
+    "expected_answer": "They meet at 11:00 AM, 120 miles from City A.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "r002",
+    "category": "multi_step_reasoning",
+    "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies? Explain your reasoning.",
+    "expected_answer": "Yes. Transitive property: Bloops → Razzies → Lazzies.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "r003",
+    "category": "instruction_following",
+    "prompt": "List exactly 5 programming languages, each on a new line, sorted alphabetically, with no additional text or explanation.",
+    "expected_answer": "C\nGo\nJava\nPython\nRust",
+    "difficulty": "easy"
+  },
+  {
+    "id": "r004",
+    "category": "instruction_following",
+    "prompt": "Rewrite this sentence in passive voice and make it exactly 10 words: 'The developer shipped the feature on Friday.'",
+    "expected_answer": "The feature was shipped by the developer on Friday.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "r005",
+    "category": "factual_accuracy",
+    "prompt": "What is the time complexity of binary search on a sorted array?",
+    "expected_answer": "O(log n)",
+    "difficulty": "easy"
+  },
+  {
+    "id": "r006",
+    "category": "factual_accuracy",
+    "prompt": "What does the CAP theorem state about distributed systems?",
+    "expected_answer": "A distributed system can guarantee at most two of: Consistency, Availability, Partition tolerance.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "r007",
+    "category": "multi_step_reasoning",
+    "prompt": "You have 12 balls, one is slightly heavier. You have a balance scale and 3 weighings. Describe the strategy to find the heavy ball.",
+    "expected_answer": "Divide into groups of 4. Weigh group 1 vs group 2. If equal, heavy ball is in group 3. Divide heavier/unknown group into 2+2 and repeat. Final weighing identifies the ball.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "r008",
+    "category": "instruction_following",
+    "prompt": "Write a haiku (5-7-5 syllables) about machine learning. Label each line with its syllable count.",
+    "expected_answer": "Data feeds the mind (5)\nPatterns emerge from the noise (7)\nMachines learn to see (5)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "r009",
+    "category": "factual_accuracy",
+    "prompt": "What is the difference between L1 and L2 regularization in machine learning?",
+    "expected_answer": "L1 (Lasso) adds absolute value of coefficients as penalty, produces sparse models. L2 (Ridge) adds squared coefficients, shrinks all weights but rarely zeroes them.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "r010",
+    "category": "multi_step_reasoning",
+    "prompt": "A startup has $500k runway. Monthly burn is $45k, but they close a deal next month worth $10k/month recurring. How many months of runway do they have from now?",
+    "expected_answer": "Month 1: 500k - 45k = 455k. From month 2: net burn = 35k/month. 455k / 35k ≈ 13 months. Total ≈ 14 months.",
+    "difficulty": "medium"
+  }
+]
