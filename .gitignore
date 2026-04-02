@@ -27,10 +27,10 @@ env/
 # macOS
 .DS_Store
 
-# Outputs (generated at runtime)
-*/outputs/*.png
-*/outputs/*.jpg
-*/results/*.png
+# Virtual environment
+.venv/
+
+# Results CSVs (generated at runtime)
 */results/*.csv
 
 # Models

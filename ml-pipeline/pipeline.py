@@ -42,7 +42,7 @@ def load_data(path: str = "WA_Fn-UseC_-Telco-Customer-Churn.csv") -> tuple[pd.Da
 
     # Fix TotalCharges (sometimes loaded as string)
     df["totalcharges"] = pd.to_numeric(df["totalcharges"], errors="coerce")
-    df["totalcharges"].fillna(df["monthlycharges"] * df["tenure"], inplace=True)
+    df["totalcharges"] = df["totalcharges"].fillna(df["monthlycharges"] * df["tenure"])
 
     # Drop customerid — not predictive
     df.drop(columns=["customerid"], errors="ignore", inplace=True)
@@ -68,7 +68,11 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     # Encode categoricals
-    cat_cols = df.select_dtypes(include="object").columns
+    # Fill any remaining NaNs in numeric cols before modelling
+    num_cols = df.select_dtypes(include="number").columns
+    df[num_cols] = df[num_cols].fillna(df[num_cols].median())
+
+    cat_cols = df.select_dtypes(include=["object", "string"]).columns
     le = LabelEncoder()
     for col in cat_cols:
         df[col] = le.fit_transform(df[col].astype(str))
